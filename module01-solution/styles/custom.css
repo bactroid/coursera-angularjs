@@ -1,0 +1,15 @@
+.valid_msg {
+    color: green;
+}
+
+.invalid_msg {
+    color: red;
+}
+
+.valid_input {
+    border: 1px solid green;
+}
+
+.invalid_input {
+    border: 1px solid red;
+}
