@@ -37,7 +37,9 @@ function ShoppingListCheckOffService () {
   this.bought = [];
 
   this.buyItem = function (index) {
-    this.bought.push(this.buy.splice(index));
+    var boughtItem = this.buy.splice(index, 1);
+    this.bought.push(boughtItem[0]);
+    console.log(this.bought);
   };
 }
 
