@@ -43,7 +43,10 @@ function MenuSearchService ($http, restUrl) {
 
 function foundItems () {
   var ddo = {
-    templateUrl: 'templates/found-items.html'
+    templateUrl: 'templates/found-items.html',
+    scope: {
+      found: '<'
+    }
   };
   return ddo;
 }
