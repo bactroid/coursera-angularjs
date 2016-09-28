@@ -1,5 +1,5 @@
 <div style="clear: both;">
-  <table width="100%">
+  <table width="100%" ng-if="found.foundItems.length">
     <tr>
       <th>Name</th>
       <th>Short Name</th>
@@ -13,4 +13,5 @@
       <td><button ng-click="onRemove({index: $index})">Don't want this one!</button></td>
     </tr>
   </table>
+  <p ng-if="found.foundItems.length === 0">Nothing found</p>
 </div>
