@@ -18,7 +18,6 @@ function NarrowItDownController (MenuSearchService) {
   };
 
   ctrl.removeItem = function (index) {
-    console.log("In removeItem()");
     ctrl.foundItems.splice(index, 1);
     console.log(ctrl.foundItems);
   };
