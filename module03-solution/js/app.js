@@ -9,11 +9,18 @@ NarrowItDownController.$inject = ['MenuSearchService'];
 function NarrowItDownController (MenuSearchService) {
   var ctrl = this;
   ctrl.foundItems = [];
+
   ctrl.searchItems = function (searchTerm) {
     var promise = MenuSearchService.getMatchedMenuItems(searchTerm);
     promise.then(function (response) {
       ctrl.foundItems = response;
     });
+  };
+
+  ctrl.removeItem = function (index) {
+    console.log("In removeItem()");
+    ctrl.foundItems.splice(index, 1);
+    console.log(ctrl.foundItems);
   };
 }
 
@@ -45,7 +52,8 @@ function foundItems () {
   var ddo = {
     templateUrl: 'templates/found-items.html',
     scope: {
-      found: '<'
+      found: '<',
+      onRemove: '&'
     }
   };
   return ddo;
