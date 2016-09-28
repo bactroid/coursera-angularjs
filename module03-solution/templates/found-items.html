@@ -1,5 +1,16 @@
 <div style="clear: both;">
-  <ul>
-    <li ng-repeat="item in found.foundItems">{{ item.name }}, {{ item.short_name }}, {{ item.description }}<button ng-click="onRemove({index: $index})">Don't want this one!</button></li>
-  </ul>
+	<table width="100%">
+		<tr>
+			<th>Name</th>
+			<th>Short Name</th>
+			<th>Description</th>
+			<th>Action</th>
+		</tr>
+		<tr ng-repeat="item in found.foundItems">
+			<td>{{ item.name }}</td>
+			<td>{{ item.short_name }}</td>
+			<td>{{ item.description }}</td>
+			<td><button ng-click="onRemove({index: $index})">Don't want this one!</button></td>
+		</tr>
+	</table>
 </div>
