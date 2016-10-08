@@ -5,18 +5,22 @@
         <title>Module 4 Solution</title>
     </head>
     <body ng-app="MenuApp">
+        <div ng-controller="MenuAppController as menu">
+            <categories items="menu.items"></categories>
+            
+            <!-- Angular Libraries -->
+            <script src="lib/angular.min.js"></script>
+            <script src="lib/angular-ui-router.min.js"></script>
 
-    <!-- Angular Libraries -->
-    <script src="lib/angular.min.js"></script>
-    <script src="lib/angular-ui-router.min.js"></script>
+            <!-- Angular Modules -->
+            <script src="src/js/menuapp.module.js"></script>
+            <script src="src/js/data.module.js"></script>
 
-    <!-- Angular Modules -->
-    <script src="src/js/menuapp.module.js"></script>
-    <script src="src/js/data.module.js"></script>
-
-    <!-- Other Angular files -->
-    <script src="src/js/menudata.service.js"></script>
-    <script src="src/js/categories/categories.component.js"></script>
-    <script src="src/js/items/items.component.js"></script>
+            <!-- Other Angular files -->
+            <script src="src/js/menuapp.controller.js"></script>
+            <script src="src/js/menudata.service.js"></script>
+            <script src="src/js/categories/categories.component.js"></script>
+            <script src="src/js/items/items.component.js"></script>
+        </div>
     </body>
 </html>
