@@ -6,8 +6,9 @@
     </head>
     <body ng-app="MenuApp">
         <div ng-controller="MenuAppController as menu">
-            <categories items="menu.items"></categories>
-            
+            <categories data="menu.categories"></categories>
+            <items category="menu.defaultCategory" data="menu.items" search="menu.getItemsForCategory(shortName)"></items>
+
             <!-- Angular Libraries -->
             <script src="lib/angular.min.js"></script>
             <script src="lib/angular-ui-router.min.js"></script>
