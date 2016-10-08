@@ -1,4 +1,10 @@
 <h2>Menu Items</h2>
-<ul>
-    <li ng-repeat="item in $ctrl.data">{{ item.name }}</li>
-</ul>
+<table class="table">
+    <tr><th>Short Name</th> <th>Item Name</th> <th>Small</th> <th>Large</th></tr>
+    <tr ng-repeat="item in $ctrl.data">
+        <td>{{ item.short_name }}</td>
+        <td>{{ item.name }}<br /><em>{{ item.description }}</em></td>
+        <td>{{ item.price_small | currency }}</td>
+        <td>{{ item.price_large | currency }}</td>
+    </tr>
+</table>
