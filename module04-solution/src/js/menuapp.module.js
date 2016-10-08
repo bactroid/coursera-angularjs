@@ -23,8 +23,12 @@ function RoutesConfig ($stateProvider, $urlRouterProvider){
         })
 
         .state('items', {
-            url: '/items',
-            templateUrl: 'src/views/items.html'
+            url: '/items/{category}',
+            templateUrl: 'src/views/items.html',
+            resolve: {
+                category: ['$stateParams', function ($stateParams) {
+                }]
+            }
         });
 }
 
