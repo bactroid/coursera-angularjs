@@ -7,7 +7,6 @@ angular.module('data')
 MenuAppController.$inject = ['MenuDataService'];
 function MenuAppController (MenuDataService) {
     var menu = this;
-    menu.defaultCategory = 'V';
 
     var promise = MenuDataService.getAllCategories();
     promise.then(function (response) {
