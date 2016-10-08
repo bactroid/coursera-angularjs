@@ -5,9 +5,9 @@
         <title>Module 4 Solution</title>
     </head>
     <body ng-app="MenuApp">
+        <h1>Kate's Point-and-Click Delivery</h1>
         <div ng-controller="MenuAppController as menu">
-            <categories data="menu.categories"></categories>
-            <items category="menu.defaultCategory" data="menu.items" search="menu.getItemsForCategory(shortName)"></items>
+            <ui-view></ui-view>
 
             <!-- Angular Libraries -->
             <script src="lib/angular.min.js"></script>
