@@ -6,8 +6,7 @@ angular.module('MenuApp')
 
 ItemsComponentController.$inject = ['list'];
 function ItemsComponentController (list) {
-    var menu_items = this;
-    menu_items.items = list;
+    this.items = list;
 }
 
 })();
